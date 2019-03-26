@@ -1,8 +1,7 @@
-const promise = fetch('https://randomuser.me/api')
+const promise = fetch('https://randomuser.me/api') // fetch obiecuje ze dostarczy dane
 
-let response = null
 
 promise
-.then((promiseValue) => {response = promiseValue})
+.then((response) => console.log(response.json())) //response obiecuje, ze wykona funkcje, json obiecuje, ze prztworzy dane
 
-console.log(response) // we cant get promise value here
+//response.json() rowniez zwraca promise, ale ta promisa resolvuje sie do sparsownych danych, parsed JSON data
